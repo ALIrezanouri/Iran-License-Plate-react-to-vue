@@ -1,4 +1,4 @@
-# Iran Lisence Plate
+# Iran License Plate for Vue
 
 ![npm](https://img.shields.io/npm/dt/iran-license-plate)
 ![GitHub issues](https://img.shields.io/github/issues/MajidAlinejad/Iran-License-Plate)
@@ -15,11 +15,11 @@
 <br />
 <br />
 
-Iran Lisence Plate is a `React Component` based on `Typescript` to display Iran car plaque appropriately depending on the serial number.
+Iran License Plate is a `Vue 3 Component` based on `Typescript` to display Iran car plaque appropriately depending on the serial number.
 
 ## Features
 
-- ⚛ React Component.
+- 💚 Vue 3 Component.
 - ☑ Typescript.
 - 👌 Validating license serial.
 - 🎈 Include free city license plate.
@@ -34,27 +34,25 @@ This module is distributed via npm which is bundled with node and should be inst
 npm i iran-license-plate
 ```
 
-> This package also depends on `react`. Please make sure you have it installed
+> This package also depends on `vue`. Please make sure you have it installed
 > as well.
 
 **🚨Shortcut: you can see all options by visiting : [storybook](https://majidalinejad.github.io/Iran-License-Plate/)🚨**
 
 ## Usage
 
-```JSX
-import IranLicensePlate from "iran-license-plate";
-import "iran-license-plate/dist/License.css";
+```vue
+<template>
+  <IranLicensePlate serial="IR15-546T55" />
+</template>
 
-function App() {
-    return (
-        <div>
-            <IranLicensePlate serial="IR15-546T55" />
-        </div>
-    );
-}
+<script setup>
+import IranLicensePlate from "iran-license-plate";
+import "iran-license-plate/dist/style.css";
+</script>
 ```
 
-## Avalilible Params
+## Available Params
 
 | property    | type                  | description                                                                                                           |
 | ----------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -78,12 +76,6 @@ This project follows the all contributors specification.
 Contributions of any kind welcome!
 
 </br>
-
-**_Documented with :_**
-<br>
-<img width="150" src="https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png">
-
-<br>
 
 ## WIKI PAGE
 
