@@ -1,11 +1,11 @@
 {
   "name": "iran-license-plate",
   "version": "0.3.15",
-  "description": "A general react component for Iran license plate.",
+  "description": "A general vue component for Iran license plate.",
   "keywords": [
     "iran-license-plate",
-    "react plaque",
-    "react car number",
+    "vue plaque",
+    "vue car number",
     "car lisence",
     "iran-plaque",
     "Lisence-number",
@@ -27,71 +27,46 @@
   },
   "private": false,
   "dependencies": {
-    "@types/node": "^16.7.13",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "typescript": "^4.4.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-docs": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/builder-webpack5": "^6.5.16",
-    "@storybook/manager-webpack5": "^6.5.16",
-    "@storybook/node-logger": "^6.5.16",
-    "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.16",
-    "@storybook/testing-library": "^0.0.13",
+    "@babel/preset-env": "^7.28.5",
+    "@chromatic-com/storybook": "^4.1.2",
+    "@storybook/addon-docs": "^10.0.2",
+    "@storybook/addon-onboarding": "^10.0.2",
+    "@storybook/vue3-vite": "^10.0.2",
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
+    "@vue/compiler-sfc": "^3.5.22",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/vue3-jest": "^29.2.6",
     "autoprefixer": "^10.4.13",
     "babel-plugin-named-exports-order": "^0.0.2",
     "gh-pages": "^5.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.2.0",
     "postcss": "^8.4.20",
     "prop-types": "^15.8.1",
-    "react-scripts": "5.0.1",
+    "storybook": "^10.0.2",
     "tailwindcss": "^3.2.4",
+    "ts-jest": "^29.4.5",
     "tsup": "^7.2.0",
+    "vue": "^3.5.22",
     "web-vitals": "^2.1.0",
     "webpack": "^5.75.0"
   },
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "prebuild": "npx tailwindcss -o dist/IranLicensePlate/style.css --minify",
-    "build": "npx -p typescript tsc -p .",
-    "postbuild": "cp --recursive ./src/IranLicensePlate/assets ./dist/IranLicensePlate ",
+    "test": "jest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build": "vite build",
     "predeploy": "build-storybook -s public",
-    "tsup": "tsup ",
     "deploy": "gh-pages -d storybook-static"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/iran-license-plate.umd.js",
+  "module": "dist/iran-license-plate.es.js",
   "browserslist": {
     "production": [
       ">0.2%",
